@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Location Finder</title>
+      <script src="js/jquery.min.js"></script>
+       
+  
+</head>
+<body>
+<div class="master">
+    <div class="top-nav">
+    <div class="heading1" data-bind="text:top_nav_heading"></div>
+    <div class="hem" data-bind="click:close">&#9776</div>
+    </div>
+    <!-- <div id="number"></div> -->
+
+    <div class="container">
+       <!-- foreach:placeArray -->
+        <div class="inp"> <select class="inp2" data-bind="options:arra,value:selectedOptionValue">
+        <!-- <option class="inside" data-bind="text:title,value:title"> -->
+            
+        <!-- </option> -->
+        </select>
+        <!-- data-bind="textInput:input_place" -->
+        <button class="filter" data-bind="click:showListings">Filter</button>
+
+        </div>
+        <!-- data-bind="click:validation()" -->
+        
+      <!--   NAME:<div class="reflect" data-bind="text:input_place"></div> -->
+        <!-- uncomment the above line to see wheter inputting is working  or not -->
+        <div class="list-places" data-bind="foreach:placeArray" >
+            <a id="places" data-bind="text:title"></a>
+            <!-- visible:id -->
+        </div>    
+    </div>
+    <div id='map'></div>
+    </div>
+
+
+
+
+    <script async defer
+        src=
+        "https://maps.googleapis.com/maps/api/js?key=AIzaSyBhewl-qltN3dzy0w0HAsZmt4Hn1Hz0rFM&v=3&callback=initMap">
+    </script>
+    <script src='js/lib/knockout-3.2.0.js'></script>
+<script src="app.js"></script>
+  </body>
+</html>
