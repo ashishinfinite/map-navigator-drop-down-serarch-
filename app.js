@@ -33,8 +33,9 @@
 }
 
 var model = function() {
-
+        //const self=this;
          self = this;
+         console.log(self);
          self.selectedOptionValue=ko.observable("");
         self.top_nav_heading = "GUJARAT LOCATIONS";
         self.arra=[];
@@ -57,6 +58,7 @@ var model = function() {
       self.placeArray()[i].id(0);
 
     if (self.placeArray()[i].title()==newValue ){
+     console.log(self);
       self.placeArray()[i].id(1);
        console.log('value of newvalue matched withh array value');
       populateInfoWindow(markers[i],markers,largeInfowindow);
